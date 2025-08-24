@@ -15,8 +15,8 @@ export async function POST(request: Request) {
     // 1. Siapkan 'Memo Resmi' seperti sebelumnya
     const factoryConfig = {
         output_gallery_path: outputDirectory,
-        api_url: "https://aisandbox-pa.googleapis.com/v1/whisk:generateImage",
-        bearer_token: "ya29.A0AS3H6NwPQTu8XI3N02TiiROAblGBJGntjelm-sp6v9pSl3GTGFStMjqnxFlKbfKWIFpriBqsb657IT8fWr3ttC85i-UL47ZaweYtFrPA9eoeKmCt0zwaMLwm6CSR1FK1V_y1Y6v6d9gzf3AtTy3Sw33LcwOVkxo7IxxwcaIo_J2dB884NRxJ6LwWVSfDFTYkCoN1ADuPajkVA4nm0THf-eYXskodDHTCsRO1Rs2N2diUIIeyJhKE_x2HkPA-oGad6OedGsGfDOVKHrlp17Zos3eb8PiJZNthgTC7l605PE_DUGMMgSPY9mvebt6rdZryt6J_gFlwXQFMuafeO9Onhjb-gmqCScr7Xnd6qtdMEqeMaCgYKARwSARMSFQHGX2Mi9L7q98Bk0OOIv3a4Mb0-1Q0371" // JANGAN LUPA GANTI INI
+        api_url: "url",
+        bearer_token: "token" // JANGAN LUPA GANTI INI
     };
     
     // Tulis memo dan surat perintah
@@ -57,4 +57,5 @@ export async function POST(request: Request) {
     console.error('[API ERROR]:', error);
     return NextResponse.json({ error: "Failed to process request" }, { status: 500 });
   }
+
 }
